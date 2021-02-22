@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Weather Data</title>
+</head>
+<body>
+	<div>
+		<h2>オ天気</h2>
+		
+		<table style="width:50%">
+			<tr>
+  				<th style="text-align: left">City</th>
+    			<th style="text-align: left">Weather</th> 
+    		</tr>	
+			<tr th:each="weather,iterStat : ${weatherData}" >
+				<td><span th:text="${weather.getName()}"></span></td>
+				<td><span th:text="${weather.getWeatherDescription()}"></span></td>
+			
+			</tr>
+		</table>
+	</div> 
+	
+	<div>
+	 <a href="/weather">モウ一回調ベル</a>
+	</div>
+	
+</body>
+</html>

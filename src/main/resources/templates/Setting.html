@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Setting</title>
+</head>
+<body>
+	<h2>言葉を設定</h2>
+
+ 	<form action="/set" method="post" th:object="${form}">
+		<label>入力</label><input type="text" name="word">
+		<input type="submit" value="送信">
+	</form>
+	
+	<h2>設定した言葉</h2>
+	<p th:text="${text}">デフォルト</p>
+</body>
+</html>
