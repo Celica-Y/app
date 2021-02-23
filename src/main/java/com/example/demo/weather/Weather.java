@@ -18,6 +18,10 @@ public class Weather implements Serializable{
 	@Setter
 	private String weatherDescription; //天気のデータ
 	
+	@Getter
+	@Setter
+	private String name;
+	
 	@Bean
 	public Weather weather() {
 		return new Weather();
